@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F10 Transaction Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e7f0fd 0%, #f6fcff 100%);
+            min-height: 100vh;
+        }
+        .receipt-wrapper {
+            max-width: 430px;
+            margin: 50px auto;
+            box-shadow: 0 6px 32px rgba(80, 112, 167, 0.13);
+            border-radius: 22px;
+            overflow: hidden;
+            background: #fff;
+        }
+        .receipt-header {
+            background: linear-gradient(135deg, #6FC247 0%, #59b63b 100%);
+            color: #fff;
+            padding: 1.1rem 1rem 0.7rem 1rem; 
+            text-align: center;
+            position: relative;
+        }
+        .logo-img {
+            max-width: 165px;
+            max-height: 50px;
+            margin-bottom: 0.5rem;
+        }
+        .brand-title {
+            font-size: 1.45rem;
+            font-weight: bold;
+            letter-spacing: 0.03em;
+        }
+        .brand-sub {
+            font-size: 0.93rem;
+            font-weight: 400;
+        }
+        .receipt-type {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 0.7rem;
+            margin-bottom: 0.5rem;
+        }
+        .receipt-body {
+            padding: 2.2rem 1.7rem 1.2rem 1.7rem;
+        }
+        .info-table {
+            width: 100%;
+            margin-bottom: 1.1rem;
+            border-collapse: collapse;
+        }
+        .info-table td {
+            font-size: 0.97rem;
+            padding: 0.32rem 0;
+            vertical-align: top;
+        }
+        .info-table td:first-child {
+            color: #6c757d;
+            font-weight: 500;
+            width: 46%;
+        }
+        .info-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+            color: #041e42;
+        }
+        .summary-table {
+            width: 100%;
+            margin-bottom: 1.3rem;
+            background: #f8fafd;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 5px rgba(80, 112, 167, 0.06);
+        }
+        .summary-table th,
+        .summary-table td {
+            font-size: 1.06rem;
+            padding: 0.65rem 0.5rem;
+            vertical-align: middle;
+        }
+        .summary-table th {
+            font-weight: 500;
+            color: #6FC247;
+            background: #f8fafd;
+            border: none;
+        }
+        .summary-table td {
+            text-align: right;
+            font-weight: 700;
+            color: #1b2a3a;
+            background: #f8fafd;
+            border: none;
+        }
+        .printed-details {
+            font-size: 0.73rem;
+            color: #6c757d;
+            margin-bottom: 0.7rem;
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+        .thankyou {
+            font-size: 1.11rem;
+            font-weight: 600;
+            color: #6FC247;
+            margin-bottom: 0.2rem;
+            margin-top: 0.7rem;
+        }
+        .footer-hr {
+            opacity: 0.24;
+            margin: 1.1rem 0;
+        }
+        .footer-note {
+            font-size: 0.93rem;
+            color: #99aabb;
+            margin-bottom: 0.6rem;
+        }
+        @media (max-width: 600px) {
+            .receipt-wrapper {
+                margin: 18px auto;
+                border-radius: 14px;
+            }
+            .receipt-header {
+                padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+            }
+            .logo-img {
+                max-width: 70px;
+                max-height: 35px;
+            }
+            .brand-title {
+                font-size: 1.1rem;
+            }
+            .receipt-body {
+                padding: 1.2rem 0.7rem 1rem 0.7rem;
+            }
+            .summary-table th,
+            .summary-table td {
+                font-size: 0.98rem;
+                padding: 0.44rem 0.32rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="receipt-wrapper">
+        <div class="receipt-header">
+            <img src="logo.png" alt="Cooperative Supermarket Logo" class="logo-img">
+            <div class="brand-title">තෝප්පුව කෝප් සිටි</div>
+            <div class="brand-sub">සී/ස වෙන්නප්පුව විවිධ සේවා සමූපකාර සමිතිය</div>
+            <div class="receipt-type">F10 කුවිතාන්සිය</div>
+        </div>
+        <div class="receipt-body">
+            <table class="info-table">
+                <tr>
+                    <td>F10 අංකය:</td>
+                    <td>F10-001</td>
+                </tr>
+                <tr>
+                    <td>දිනය:</td>
+                    <td>25/05/2025</td>
+                </tr>
+                <tr>
+                    <td>පරිශීලක:</td>
+                    <td>ganga</td>
+                </tr>
+                <tr>
+                    <td>ගනුදෙනුකරු:</td>
+                    <td>සුසිලා ධර්මවර්ධන</td>
+                </tr>
+                <tr>
+                    <td>සීට්ටුව:</td>
+                    <td>NATTAL-400</td>
+                </tr>
+            </table>
+            <table class="summary-table">
+                <tbody>
+                    <tr>
+                        <th>සීට්ටු මුදල</th>
+                        <td>20,000.00</td>
+                    </tr>
+                    <tr>
+                        <th>ගෙවීම්</th>
+                        <td>1,000.00</td>
+                    </tr>
+                    <tr>
+                        <th>ඉතිරි මුදල</th>
+                        <td>19,000.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="thankyou text-center">
+                ඔබගේ ගනුදෙනුවට ස්තුතියි!
+            </div>
+            <hr class="footer-hr">
+            <div class="printed-details">
+                Generated at 03/08/2025 15:33:57
+            </div>
+            <div class="footer-note text-center">
+                Software by www.ssipl.lk
+            </div>
+        </div>
+    </div>
+</body>
+</html>
